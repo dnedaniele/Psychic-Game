@@ -24,9 +24,7 @@ document.onkeyup = function () {
 
 
     var computerGuess = letters[Math.floor(Math.random()*letters.length)];
-
-     
-      //computerGuess = letters[Math.floor(Math.random() * i)]; 
+ 
 
     console.log(computerGuess);
 // compare USer Guess and Computer random input === // Win/lose conditions:
@@ -36,7 +34,7 @@ document.onkeyup = function () {
     } else {
         losses++, GuessesLeft--;
         alert('you loose: ' + losses);
-        
+
 // show letters guessed
 
         userLettguessed.push(userguess);
