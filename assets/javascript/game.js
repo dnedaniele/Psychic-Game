@@ -8,7 +8,7 @@ var losses = 0;
 
 var GuessesLeft = 10;
 
-var userGuesslett = 0;
+var userLettguessed = [];
 
 // Creates an array that lists out all of the options
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q','r','s','t','u', 'v', 'x', 'y', 'w', 'z'];
@@ -17,9 +17,11 @@ var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 
 document.onkeyup = function () {
     var userguess = String.fromCharCode(event.keyCode).toLocaleLowerCase();
     console.log(userguess);
+   
+ 
 
     // Randomly chooses a choice from the options array. This is the Computer's guess.
-    // for (var i = 0; i < 10; i++) {
+
 
     var computerGuess = letters[Math.floor(Math.random()*letters.length)];
 
@@ -34,12 +36,18 @@ document.onkeyup = function () {
     } else {
         losses++, GuessesLeft--;
         alert('you loose: ' + losses);
+        
+// show letters guessed
+
+        userLettguessed.push(userguess);
+        document.getElementById("youGuessedsoFar").innerHTML = userLettguessed;
+        // (elements.join())
         }
 
     // each time the userclick (document.onkeyup) --GuessesLeft and useruguessnumb++
 
     var html = '<h3>Press any key to start the game ;)</h3>' + '<p >Wins: ' + wins + '</p>' + '<p>Losses: ' + losses + '</p>' +
-        '<p>Guesses Left: ' + GuessesLeft + '</p>' + '<p>You guesses so far: ' + userguess + '</p>'
+        '<p>Guesses Left: ' + GuessesLeft + '</p>' 
 
         document.querySelector('#game').innerHTML = html;
 } 
