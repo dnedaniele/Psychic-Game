@@ -19,11 +19,12 @@ document.onkeyup = function () {
     console.log(userguess);
 
     // Randomly chooses a choice from the options array. This is the Computer's guess.
-    
-    // var computerGuess = letters[Math.floor(Math.random()*letters.lenght)];
+    // for (var i = 0; i < 10; i++) {
 
-     for (var i = 0; i < 10; i++) {
-      computerGuess = letters[Math.floor(Math.random() * i)]; 
+    var computerGuess = letters[Math.floor(Math.random()*letters.length)];
+
+     
+      //computerGuess = letters[Math.floor(Math.random() * i)]; 
 
     console.log(computerGuess);
 // compare USer Guess and Computer random input === // Win/lose conditions:
@@ -39,4 +40,6 @@ document.onkeyup = function () {
 
     var html = '<h3>Press any key to start the game ;)</h3>' + '<p >Wins: ' + wins + '</p>' + '<p>Losses: ' + losses + '</p>' +
         '<p>Guesses Left: ' + GuessesLeft + '</p>' + '<p>You guesses so far: ' + userGuessnumb + '</p>'
-}}
+
+        document.querySelector('#game').innerHTML = html;
+} 
