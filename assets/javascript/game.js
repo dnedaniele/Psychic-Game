@@ -6,9 +6,9 @@ var wins = 0;
 
 var losses = 0;
 
-var GuessesLeft = 0;
+var GuessesLeft = 10;
 
-var userGuessnumb = 0;
+var userGuesslett = 0;
 
 // Creates an array that lists out all of the options
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q','r','s','t','u', 'v', 'x', 'y', 'w', 'z'];
@@ -32,14 +32,14 @@ document.onkeyup = function () {
         wins++;
         alert('you win: ' + wins);
     } else {
-        losses++;
+        losses++, GuessesLeft--;
         alert('you loose: ' + losses);
         }
 
     // each time the userclick (document.onkeyup) --GuessesLeft and useruguessnumb++
 
     var html = '<h3>Press any key to start the game ;)</h3>' + '<p >Wins: ' + wins + '</p>' + '<p>Losses: ' + losses + '</p>' +
-        '<p>Guesses Left: ' + GuessesLeft + '</p>' + '<p>You guesses so far: ' + userGuessnumb + '</p>'
+        '<p>Guesses Left: ' + GuessesLeft + '</p>' + '<p>You guesses so far: ' + userguess + '</p>'
 
         document.querySelector('#game').innerHTML = html;
 } 
