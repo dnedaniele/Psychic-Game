@@ -38,8 +38,7 @@ document.onkeyup = function () {
         // show letters guessed
 
         userLettguessed.push(userguess);
-        document.getElementById("youGuessedsoFar").innerHTML = userLettguessed;
-        // (elements.join())
+        document.getElementById("youGuessedsoFar").innerHTML = userLettguessed.join(" ");
     }
 
     // each time the userclick (document.onkeyup) --GuessesLeft and useruguessnumb++
