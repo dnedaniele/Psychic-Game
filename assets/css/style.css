@@ -1,0 +1,12 @@
+article {
+    display: flex;
+  }
+  
+ p #youGuessedsoFar {
+    flex: 50%;
+   
+  }
+  #youGuessedsoFar {
+      margin-left: 3px;
+      
+  }
